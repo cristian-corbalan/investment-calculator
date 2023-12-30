@@ -1,11 +1,10 @@
 import {useState} from "react";
 
-export default function Input ({id, label, initialValue = 0, onInvestmentValues, ...props}) {
+export default function Input({id, label, initialValue = 0, onInvestmentValues, ...props}) {
     const [value, setValue] = useState(initialValue);
 
     function handleValueChange(event) {
-        const value = +event.target.value
-
+        const value = +event.target.value;
         setValue(value);
         onInvestmentValues(id, value);
     }
@@ -19,6 +18,9 @@ export default function Input ({id, label, initialValue = 0, onInvestmentValues,
                 onChange={handleValueChange}
                 {...props}
             />
+            {value < 0 && id === 'duration'
+                ? <p className="error">❌ The duration mustn't be less than 0</p> : ''}
+
         </div>
-    )
+    );
 }
