@@ -1,10 +1,13 @@
 import {useState} from "react";
 
-export default function Input ({id, label, initialValue = 0, ...props}) {
+export default function Input ({id, label, initialValue = 0, onInvestmentValues, ...props}) {
     const [value, setValue] = useState(initialValue);
 
     function handleValueChange(event) {
-        setValue(+event.target.value);
+        const value = +event.target.value
+
+        setValue(value);
+        onInvestmentValues(id, value);
     }
 
     return (

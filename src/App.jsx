@@ -13,9 +13,18 @@ const INVESTMENT_VALUES = {
 function App() {
     const [investmentValues, setInvestmentValues] = useState(INVESTMENT_VALUES);
 
+    function handleInvestmentValues (type, newValue){
+        setInvestmentValues((prevValues) => {
+            return {
+                ...prevValues,
+                [type]: newValue
+            };
+        })
+    }
+
     return (
         <>
-            <UserInput></UserInput>
+            <UserInput onInvestmentValues={handleInvestmentValues}></UserInput>
             <Results></Results>
         </>
     )
