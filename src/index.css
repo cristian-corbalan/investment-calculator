@@ -45,6 +45,14 @@ body {
   gap: 1.5rem;
 }
 
+.input-group:first-child{
+  margin-bottom: 1.5rem;
+}
+
+.input-group > div {
+  width: 100%;
+}
+
 #user-input label {
   display: block;
   margin-bottom: 0.25rem;

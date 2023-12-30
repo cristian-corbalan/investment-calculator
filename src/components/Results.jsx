@@ -33,5 +33,5 @@ export default function Results({results = []}) {
             }
             </tbody>
         </table>
-    )
+    );
 }
