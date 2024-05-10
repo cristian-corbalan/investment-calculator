@@ -57,7 +57,7 @@ body {
   display: block;
   margin-bottom: 0.25rem;
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -82,13 +82,12 @@ body {
 }
 
 #result thead {
-  font-size: 0.7rem;
+  font-size: 1rem;
   color: #83e6c0;
 }
 
 #result tbody {
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 0.85rem;
   color: #c2e9e0;
 }
 
@@ -98,6 +97,5 @@ body {
 
 .error {
   color: #ffa0a0;
-  font-size: .8em;
   font-weight: bold;
 }
